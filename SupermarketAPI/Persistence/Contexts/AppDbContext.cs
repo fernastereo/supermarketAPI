@@ -29,7 +29,9 @@ namespace SupermarketAPI.Persistence.Contexts
             builder.Entity<Category>().HasData
             (
                 new Category { Id = 100, Name = "Fruits and Vegetables" }, // Id set manually due to in-memory provider
-                new Category { Id = 101, Name = "Dairy" }
+                new Category { Id = 101, Name = "Dairy" },
+                new Category { Id = 102, Name = "Candies"},
+                new Category { Id = 103, Name = "Liquors"}
             );
 
             builder.Entity<Product>().ToTable("Products");
