@@ -41,6 +41,9 @@ namespace SupermarketAPI.Controllers
             {
                 return BadRequest(ModelState.GetErrorMessages());
             }
+
+            var category = _mapper.Map<SaveCategoryResource, Category>(resource);
+
         }
     }
 }
