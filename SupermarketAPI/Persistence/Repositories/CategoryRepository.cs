@@ -31,6 +31,11 @@ namespace SupermarketAPI.Persistence.Repositories
             return await _context.Categories.ToListAsync();
         }
 
+        public void Remove(Category category)
+        {
+            _context.Categories.Remove(category);
+        }
+
         public void Update(Category category)
         {
             _context.Categories.Update(category);
