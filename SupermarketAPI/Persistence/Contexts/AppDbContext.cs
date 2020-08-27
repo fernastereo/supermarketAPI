@@ -30,8 +30,9 @@ namespace SupermarketAPI.Persistence.Contexts
             (
                 new Category { Id = 100, Name = "Fruits and Vegetables" }, // Id set manually due to in-memory provider
                 new Category { Id = 101, Name = "Dairy" },
-                new Category { Id = 102, Name = "Candies"},
-                new Category { Id = 103, Name = "Liquors"}
+                new Category { Id = 102, Name = "Candies" },
+                new Category { Id = 103, Name = "Liquors" },
+                new Category { Id = 104, Name = "Meat" }
             );
 
             builder.Entity<Product>().ToTable("Products");
@@ -65,7 +66,23 @@ namespace SupermarketAPI.Persistence.Contexts
                     Name = "Banana",
                     QuantityInPackage = 1,
                     UnitOfMeasurement = EUnitOfMeasurement.Unity,
-                    CategoryId = 101,
+                    CategoryId = 100,
+                },
+                new Product
+                {
+                    Id = 103,
+                    Name = "Chicken legs",
+                    QuantityInPackage = 1,
+                    UnitOfMeasurement = EUnitOfMeasurement.Kilogram,
+                    CategoryId = 104,
+                },
+                new Product
+                {
+                    Id = 104,
+                    Name = "Checken brest",
+                    QuantityInPackage = 1,
+                    UnitOfMeasurement = EUnitOfMeasurement.Kilogram,
+                    CategoryId = 104,
                 }
             );
         }
