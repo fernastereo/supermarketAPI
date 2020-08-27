@@ -58,6 +58,14 @@ namespace SupermarketAPI.Persistence.Contexts
                     QuantityInPackage = 2,
                     UnitOfMeasurement = EUnitOfMeasurement.Liter,
                     CategoryId = 101,
+                },
+                new Product
+                {
+                    Id = 102,
+                    Name = "Banana",
+                    QuantityInPackage = 1,
+                    UnitOfMeasurement = EUnitOfMeasurement.Unity,
+                    CategoryId = 101,
                 }
             );
         }
